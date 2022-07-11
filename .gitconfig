@@ -1,0 +1,14 @@
+[credential]
+	helper = 
+	helper = /usr/lib/share/git-credential-manager-core/git-credential-manager-core
+	credentialStore = secretservice
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = main
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[push]
+	autoSetupRemote = true
