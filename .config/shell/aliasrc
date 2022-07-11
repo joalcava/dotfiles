@@ -50,3 +50,28 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+
+# dotnet
+alias \
+	dnb="dotnet build" \
+	dnr="dotnet run" \
+	dnw="dotnet watch" \
+	dnwr="dotnet watch run" \
+	dnres="dotnet restore" \
+	dnefdu="dotnet ef database update" \
+	dnefdd="dotnet ef database drop" \
+	dnefmr="dotnet ef migrations remove"
+
+# exa
+alias \
+	ls='exa --icons --group-directories-first' \
+	l='exa -lbF --git --icons --group-directories-first' \
+	ll='exa -lbGF --git --icons --group-directories-first'  \
+	llm='exa -lbGd --git --sort=modified --icons --group-directories-first'    \
+	la='exa -labhUmu --time-style=iso --git --color-scale --icons --group-directories-first'   \
+	lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons --group-directories-first'  \
+	lt='exa --long --tree --level=3 --git --color-scale --icons'
+
+# configs bare repo
+alias cfg="git --git-dir=$HOME/.dotFiles --work-tree=$HOME"
+
