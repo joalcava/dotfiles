@@ -59,7 +59,7 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
   use('chrisbra/csv.vim')
   use("rrethy/vim-illuminate")
-  use("tpope/vim-surround")
+  use("kylechui/nvim-surround")
   use("tpope/vim-repeat")
   use("justinmk/vim-sneak")
   use("folke/which-key.nvim")
@@ -93,7 +93,7 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
+    run = 'TSUpdate'
 	})
 
 	-- Git
