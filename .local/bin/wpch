@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# script to set random background wallpapers
+# set base path
+export wallpaper_path=/home/joalcava/Pictures/Nature
+shopt -s nullglob
+
+# store all the image file names in wallpapers array
+wallpapers=(
+    "$wallpaper_path"/*.jpg
+    "$wallpaper_path"/*.jpeg
+    "$wallpaper_path"/*.png
+)
+# get array size
+wallpapers_size=${#wallpapers[*]}
+
+# set wallpapers in incremental order
+while true
+do
+    index=$(($RANDOM%$wallpapers_size))
+    wp_path=${wallpapers[$index]}
+    echo $wp_path
+    setbg $wp_path
+    # keep the wallpaper for the specified time
+    sleep 10m
+done
