@@ -1,15 +1,15 @@
+[user]
+	name = Alejandro Cardona
+	email = jose@josecardona.dev
 [credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
 	helper = 
-	helper = /usr/lib/share/git-credential-manager-core/git-credential-manager-core
+	helper = /usr/local/bin/git-credential-manager-core
 	credentialStore = secretservice
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [init]
 	defaultBranch = main
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 [push]
 	autoSetupRemote = true
 [user]
