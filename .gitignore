@@ -2,6 +2,7 @@
 .config/zsh/.zdirs
 .config/zsh/.zcompdump
 .config/nvim/plugged
+.config/nvim/autoload/plug.vim
 .config/nvim/plugin/packer_compiled.lua
 
 *.orig
