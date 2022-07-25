@@ -1,0 +1,13 @@
+format = """$user$all"""
+right_format = """$time"""
+
+[directory]
+truncation_length = 5
+truncate_to_repo = false
+
+[time]
+disabled = false
+format = ' [\[$time\]]($style) '
+
+[c]
+disabled = true
