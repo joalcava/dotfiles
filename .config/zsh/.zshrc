@@ -112,16 +112,12 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/git.plugin.zsh"
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# load nvm (node version manager)
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-eval "$(dircolors ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/gruvbox.dircolors)"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+# source /usr/share/nvm/init-nvm.sh
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
