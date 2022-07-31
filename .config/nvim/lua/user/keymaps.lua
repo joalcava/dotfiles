@@ -56,7 +56,7 @@ keymap("i", "[", "[<c-g>u", opts)
 keymap("i", "]", "]<c-g>u", opts)
 
 -- Press nn fast to exit insert mode 
-keymap("i", "nn", "<ESC>", opts)
+-- keymap("i", "nn", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
