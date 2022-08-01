@@ -20,4 +20,6 @@ if not loaded_ngit then
 	return
 end
 
-neogit.setup({})
+neogit.setup({
+  kind = "replace"
+})

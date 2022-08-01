@@ -50,23 +50,23 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
-	use("moll/vim-bbye")
+  use("moll/vim-bbye")
 	use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
 	use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-	use("chrisbra/csv.vim")
-	use("rrethy/vim-illuminate")
-	use("kylechui/nvim-surround")
-	use("ggandor/leap.nvim")
-	use("folke/which-key.nvim")
+  use('chrisbra/csv.vim')
+  use("rrethy/vim-illuminate")
+  use("kylechui/nvim-surround")
+  use("ggandor/leap.nvim")
+  use("folke/which-key.nvim")
 
 	-- Colorschemes and appareance
 	use("lunarvim/darkplus.nvim")
 	use("lunarvim/colorschemes")
-	use("ellisonleao/gruvbox.nvim")
+  use("ellisonleao/gruvbox.nvim")
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -86,17 +86,17 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+	use({ "nvim-telescope/telescope.nvim" })
 
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = "TSUpdate",
+    run = 'TSUpdate'
 	})
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
-	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -104,3 +104,4 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+
