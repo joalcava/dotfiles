@@ -23,3 +23,8 @@ end
 neogit.setup({
   kind = "replace"
 })
+
+-- symbols-outline
+vim.g.symbols_outline = {
+  auto_preview = false
+}

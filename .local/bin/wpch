@@ -22,5 +22,5 @@ do
     echo $wp_path
     setbg $wp_path
     # keep the wallpaper for the specified time
-    sleep 10m
+    sleep 20m
 done
