@@ -1,6 +1,5 @@
 [user]
-	name = Alejandro Cardona
-	email = jose@josecardona.dev
+	name = Jose Cardona
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
 	helper = 
@@ -12,5 +11,3 @@
 	useHttpPath = true
 [push]
 	autoSetupRemote = true
-[user]
-	name = Jose Cardona
