@@ -16,7 +16,7 @@ local options = {
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
+  termguicolors = false,                    -- set term gui colors (most terminals support this)
   timeoutlen = 400,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   undodir = "/home/joalcava/.vim/undodir",
@@ -35,8 +35,12 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   spelllang = "en,es",
-  colorcolumn = "80"
+  colorcolumn = "80",
+  foldnestmax = 2
 }
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.shortmess:append "c"
 

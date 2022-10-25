@@ -36,8 +36,8 @@ keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 
 -- Navigate buffers
-keymap("n", "<A-n>", ":bnext<CR>", opts)
-keymap("n", "<A-e>", ":bprevious<CR>", opts)
+keymap("n", "<A-e>", ":bnext<CR>", opts)
+keymap("n", "<A-n>", ":bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
@@ -66,7 +66,6 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
