@@ -51,6 +51,7 @@ alias \
 	lf="lfub" \
 	neogit="/usr/bin/nvim -c Neogit" \
 	ngit="neogit" \
+  nv="neovide" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 

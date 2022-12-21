@@ -16,19 +16,19 @@ local options = {
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
-  termguicolors = false,                    -- set term gui colors (most terminals support this)
+  termguicolors = true,                   -- set term gui colors (most terminals support this)
   timeoutlen = 400,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   undodir = "/home/joalcava/.vim/undodir",
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
+  --[[ shiftwidth = 2,                          -- the number of spaces inserted for each indentation ]]
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
   relativenumber = true,                   -- set relative numbered lines
-  numberwidth = 4,                         -- set number column width to 2 {default 4}
+  numberwidth = 2,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
@@ -50,4 +50,14 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd [[set formatoptions-=cro]]
+
+
+vim.cmd([[
+  if exists("g:neovide")
+    set guifont=IBM\ Plex\ Mono:h14
+    let g:neovide_scale_factor = 1.0
+    let g:neovide_transparency = 0.9
+    let g:neovide_cursor_animation_length = 0.05
+  endif
+]])
