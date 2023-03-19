@@ -16,7 +16,7 @@
 )
 
 (defalias
-    ctl_a (tap-hold-next-release 200 a lctl)
+    ctl_z (tap-hold-next-release 200 z lctl)
     alt_r (tap-hold-next-release 200 r lalt)
     met_s (tap-hold-next-release 200 s lmet)
     sft_t (tap-hold-next-release 200 t lsft)
@@ -29,6 +29,6 @@
 
 (deflayer default
     tab   q       w       f       p       b   j   l       u       y       ;
-    esc   @ctl_a  @alt_r  @met_s  @sft_t  g   m   @sft_n  @met_e  @alt_i  @ctl_o
-    lsft  z       x       c       d       v   k   h       ,       .       /
+    esc   a       @alt_r  @met_s  @sft_t  g   m   @sft_n  @met_e  @alt_i  @ctl_o
+    lsft  @ctl_z  x       c       d       v   k   h       ,       .       /
 )
