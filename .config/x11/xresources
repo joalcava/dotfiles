@@ -1,5 +1,5 @@
 !! HiDPI
-Xft.dpi: 158
+Xft.dpi: 128
 Xft.autohint: 0
 Xft.hintstyle: hintful
 Xft.hinting: 1
@@ -11,5 +11,6 @@ Xft.antialias: 1
 !! Set a default font and font size as below:
 *.font: monospace:size=13
 
-#include "./themes/nord"
+#include "./themes/SpaceGray Eighties Dull"
+! #include "./themes/nord"
 ! #include "./themes/Batman"

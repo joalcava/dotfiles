@@ -1,13 +1,9 @@
 [user]
 	name = Jose Cardona
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
-	helper = 
-	helper = /usr/local/bin/git-credential-manager-core
 	credentialStore = secretservice
+	helper = /usr/lib/git-core/git-credential-libsecret
 [init]
 	defaultBranch = main
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [push]
 	autoSetupRemote = true
