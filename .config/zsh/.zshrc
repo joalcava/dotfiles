@@ -69,7 +69,7 @@ bindkey -s '^o' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 
 bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
-bindkey -s '^p' '^uvim "$(fzf)"\n'
+bindkey -s '^p' '^unvim "$(FZF_DEFAULT_COMMAND="fd -H" fzf)"\n'
 
 bindkey '^[[P' delete-char
 
@@ -118,8 +118,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 eval "$(mcfly init zsh)"
-
-# source /usr/share/nvm/init-nvm.sh
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

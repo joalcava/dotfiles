@@ -55,12 +55,10 @@ return packer.startup(function(use)
   use("tpope/vim-sleuth")
 
   -- Colorschemes
+  use("arturgoms/moonbow.nvim")
   use({ "rose-pine/neovim", as = "rose-pine" })
   use("ellisonleao/gruvbox.nvim")
-  use("folke/tokyonight.nvim")
   use({ "catppuccin/nvim", as = "catppuccin" })
-  use("marko-cerovac/material.nvim")
-  use("projekt0n/github-nvim-theme")
 
   -- UI/UX
   use({ "shortcuts/no-neck-pain.nvim", tag = "*" })
