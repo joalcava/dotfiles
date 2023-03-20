@@ -113,6 +113,7 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/git.plugin.zsh"
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(zoxide init zsh)"
