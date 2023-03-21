@@ -1,6 +1,6 @@
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 require("catppuccin").setup({
-  transparent_background = true,
+  transparent_background = false,
   term_colors = false,
   compile = {
     enabled = false,
@@ -35,24 +35,6 @@ require("catppuccin").setup({
   color_overrides = {},
   highlight_overrides = {},
 })
-
---[[ require("gruvbox").setup({ ]]
---[[   undercurl = true, ]]
---[[   underline = true, ]]
---[[   bold = true, ]]
---[[   italic = true, ]]
---[[   strikethrough = true, ]]
---[[   invert_selection = false, ]]
---[[   invert_signs = false, ]]
---[[   invert_tabline = false, ]]
---[[   invert_intend_guides = false, ]]
---[[   inverse = true, -- invert background for search, diffs, statuslines and errors ]]
---[[   contrast = "", -- can be "hard", "soft" or empty string ]]
---[[   palette_overrides = {}, ]]
---[[   overrides = {}, ]]
---[[   dim_inactive = false, ]]
---[[   transparent_mode = true, ]]
---[[ }) ]]
 
 vim.g.material_style = "deep ocean"
 
