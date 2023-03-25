@@ -25,6 +25,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+keymap('n', '<leader>a', '<cmd>AerialToggle!<CR>', opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -40,8 +42,8 @@ keymap("n", "<A-e>", ":bnext<CR>", opts)
 keymap("n", "<A-n>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-k>", ":m .-2<CR>==", opts)
-keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-Down>", ":m .-2<CR>==", opts)
+keymap("n", "<A-Up>", ":m .+1<CR>==", opts)
 
 -- Insert --
 -- Add characters to undo list
@@ -71,13 +73,6 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("x", "<A-Up>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-Down>", ":move '<-2<CR>gv-gv", opts)
 
