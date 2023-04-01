@@ -44,7 +44,7 @@ require("rose-pine").setup({
 
 vim.cmd([[
   try
-    colorscheme rose-pine
+    colorscheme catppuccin
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark
