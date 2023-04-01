@@ -18,6 +18,7 @@ configs.setup({
     "rust",
     "java",
     "yaml",
+    "graphql"
   },
   autopairs = {
     enable = true,
