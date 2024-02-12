@@ -1,9 +1,12 @@
-[user]
-	name = Jose Cardona
 [credential]
 	credentialStore = secretservice
-	helper = /usr/lib/git-core/git-credential-libsecret
-[init]
-	defaultBranch = main
+	helper = 
+	helper = /home/joalcava/.dotnet/tools/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[user]
+	name = Jose Cardona
+[core]
+	editor = nvim
 [push]
 	autoSetupRemote = true
