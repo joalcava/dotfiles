@@ -1,0 +1,29 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """$user$all"""
+right_format = """$time"""
+
+[aws]
+disabled = true
+
+# [directory]
+# truncation_length = 5
+# truncate_to_repo = false
+
+[time]
+disabled = false
+format = ' [\[$time\]]($style) '
+style = "whitesmoke"
+
+[c]
+disabled = true
+
+[bun]
+format = "[$symbol]($style)"
+
+[nodejs]
+version_format = "v${major}"
+
+[dotnet]
+format = "via [$symbol($version )]($style)"
+version_format = "v${major}"
