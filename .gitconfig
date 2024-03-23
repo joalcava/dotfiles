@@ -1,6 +1,5 @@
 [credential]
 	credentialStore = secretservice
-	helper = 
 	helper = /home/joalcava/.dotnet/tools/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
