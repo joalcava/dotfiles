@@ -7,7 +7,7 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-    config = function(one, two)
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
@@ -60,6 +60,8 @@ local plugins = {
 
   { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
 
+  { "JoosepAlviste/nvim-ts-context-commentstring" },
+
   {
     "kylechui/nvim-surround",
     version = "*",
@@ -89,6 +91,15 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require "custom.configs.treesitter-textobjects"
+    end,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    config = function(_, opts)
+      require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
     end,
   },
 

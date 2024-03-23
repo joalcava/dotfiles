@@ -17,7 +17,9 @@ M.ui = {
   },
 
   statusline = {
-    theme = "vscode",
+    theme = "default",
+    separator_style = "default",
+    overriden_modules = nil,
   },
 }
 
