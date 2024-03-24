@@ -1,0 +1,6 @@
+[font]
+normal = { family = "MonoLisaScript Nerd Font" }
+size = 12
+
+[window]
+decorations_theme_variant = "Dark"
