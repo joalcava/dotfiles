@@ -31,7 +31,5 @@ require("nvim-treesitter.configs").setup {
         ["<leader><"] = "@parameter.inner",
       },
     },
-
-
   },
 }
