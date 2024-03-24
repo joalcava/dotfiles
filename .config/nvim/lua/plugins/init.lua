@@ -1,59 +1,59 @@
 return {
   {
-    {
-      "max397574/better-escape.nvim",
-      enabled = false,
-    },
+    "max397574/better-escape.nvim",
+    enabled = false,
+  },
 
-    {
-      "williamboman/mason.nvim",
-      opts = {
-        ensure_installed = {
-          -- lua
-          "lua-language-server",
-          "stylua",
-          -- web dev
-          "html-lsp",
-          "css-lsp",
-          "prettier",
-          "typescript-language-server",
-          "tailwindcss-language-server",
-          "deno",
-          -- languages
-          "clangd",
-          "clang-format",
-          "gopls",
-          "rust-analyzer",
-          -- config n scripting
-          "taplo",
-          "bash-language-server",
-        },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- lua
+        "lua-language-server",
+        "stylua",
+        -- web dev
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "typescript-language-server",
+        "tailwindcss-language-server",
+        "deno",
+        -- languages
+        "clangd",
+        "clang-format",
+        "gopls",
+        "rust-analyzer",
+        -- config n scripting
+        "taplo",
+        "bash-language-server",
       },
     },
+  },
 
-    {
-      "nvim-treesitter/nvim-treesitter",
-      opts = {
-        ensure_installed = {
-          "vim",
-          "vimdoc",
-          "lua",
-          "html",
-          "css",
-          "javascript",
-          "typescript",
-          "tsx",
-          "c",
-          "markdown",
-          "go",
-          "rust",
-          "markdown_inline",
-          "toml",
-          "bash",
-        },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "vimdoc",
+        "lua",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "c",
+        "markdown",
+        "go",
+        "rust",
+        "markdown_inline",
+        "toml",
+        "bash",
       },
     },
+  },
 
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre' -- format on save
     config = function()

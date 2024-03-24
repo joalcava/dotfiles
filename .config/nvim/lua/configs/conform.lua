@@ -1,13 +1,16 @@
 local options = {
+  lsp_fallback = true,
   formatters_by_ft = {
-		sh = { "shfmt" },
-		lua = { "stylua" },
+    sh = { "shfmt" },
+    lua = { "stylua" },
 
-		html = { "prettier" },
-		css = { "prettier" },
+    html = { "prettier" },
+    css = { "prettier" },
     json = { "jq" },
-		javascript = { "prettier" },
-		javascriptreact = { "prettier" },
+    javascript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
 
     go = { "gofmt", "goimports" },
     rust = { "rustfmt" },

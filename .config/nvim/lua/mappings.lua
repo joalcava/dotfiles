@@ -4,9 +4,10 @@ local map = vim.keymap.set
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+map("n", "-", ";")
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
-map("n", "<leader>q", "<cmd> q <CR>", { desc = "Exit vim" })
+-- map("n", "<leader>q", "<cmd> q <CR>", { desc = "Exit vim" })
 
 map("v", "<", "<gv", { desc = "indent" })
 map("v", ">", ">gv", { desc = "indent" })
