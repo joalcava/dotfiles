@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "nightlamp",
-  theme_toggle = { "nightlamp", "blossom_light" },
+  theme = "chadtain",
+  theme_toggle = { "chadtain", "blossom_light" },
   -- transparency = true,
 
   cmp = {
@@ -20,9 +20,8 @@ M.ui = {
   },
 
   statusline = {
-    theme = "default",
+    theme = "minimal",
     separator_style = "block",
-    modules = nil,
   },
 }
 

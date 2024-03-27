@@ -23,6 +23,7 @@ return {
         "clang-format",
         "gopls",
         "rust-analyzer",
+        "csharp-language-server",
         -- config n scripting
         "taplo",
         "bash-language-server",
@@ -43,6 +44,7 @@ return {
         "typescript",
         "tsx",
         "c",
+        "c_sharp",
         "markdown",
         "go",
         "rust",
