@@ -19,5 +19,5 @@ map("v", "<A-Up>", ":MoveBlock(-1)<CR>")
 
 --  format with conform
 map("n", "<leader>fm", function()
-  require("conform").format()
+  require("conform").format { timeout_ms = 2500 }
 end, { desc = "formatting" })

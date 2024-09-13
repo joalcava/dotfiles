@@ -1,4 +1,12 @@
 return {
+  -- {
+  --   dir = "/home/joalcava/repos/tw-prefixer.nvim",
+  --   lazy = false
+  -- },
+  {
+    "kmonad/kmonad-vim",
+    lazy = false,
+  },
   {
     "max397574/better-escape.nvim",
     enabled = false,
@@ -23,6 +31,7 @@ return {
         "clang-format",
         "gopls",
         "rust-analyzer",
+        "csharp-language-server",
         -- config n scripting
         "taplo",
         "bash-language-server",
@@ -43,6 +52,7 @@ return {
         "typescript",
         "tsx",
         "c",
+        "c_sharp",
         "markdown",
         "go",
         "rust",
@@ -79,22 +89,36 @@ return {
   },
 
   -- Not in NVChad
+  { "folke/tokyonight.nvim", lazy = false },
+
+  { "catppuccin/nvim", name = "catppuccin", lazy = false },
 
   { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
 
   { "JoosepAlviste/nvim-ts-context-commentstring" },
 
-  { "justinmk/vim-sneak", event = "VeryLazy" },
+  -- { "justinmk/vim-sneak", event = "VeryLazy" },
+
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    config = function()
+      require("leap").create_default_mappings()
+    end,
+  },
 
   {
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
       "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
     },
     cmd = "Neogit",
-    config = true,
+    config = function()
+      vim.cmd [[colorscheme catppuccin]]
+      require("neogit").setup {}
+    end,
   },
 
   {
