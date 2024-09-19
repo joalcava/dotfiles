@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "ashes",
-  theme_toggle = { "ashes", "blossom_light" },
+  theme = "chocolate",
+  theme_toggle = { "chocolate", "blossom_light" },
   -- transparency = true,
 
   cmp = {

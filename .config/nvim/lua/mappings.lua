@@ -17,6 +17,10 @@ map("n", "<A-Up>", ":MoveLine(-1)<CR>")
 map("v", "<A-Down>", ":MoveBlock(1)<CR>")
 map("v", "<A-Up>", ":MoveBlock(-1)<CR>")
 
+-- leap
+map({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+
 --  format with conform
 map("n", "<leader>fm", function()
   require("conform").format { timeout_ms = 2500 }

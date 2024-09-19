@@ -97,13 +97,11 @@ return {
 
   { "JoosepAlviste/nvim-ts-context-commentstring" },
 
-  -- { "justinmk/vim-sneak", event = "VeryLazy" },
-
   {
     "ggandor/leap.nvim",
     lazy = false,
     config = function()
-      require("leap").create_default_mappings()
+      require("leap")
     end,
   },
 
