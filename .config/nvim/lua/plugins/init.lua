@@ -15,7 +15,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = {
+      pkgs = {
         -- lua
         "lua-language-server",
         "stylua",
