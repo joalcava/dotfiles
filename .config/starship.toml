@@ -3,6 +3,13 @@
 format = """$user$all"""
 right_format = """$time"""
 
+[shell]
+disabled = false
+zsh_indicator = ""
+powershell_indicator = "󰨊"
+bash_indicator = "󱆃"
+fish_indicator = "󰈺"
+
 [aws]
 disabled = true
 

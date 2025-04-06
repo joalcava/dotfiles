@@ -4,14 +4,23 @@ return {
   --   lazy = false
   -- },
   {
-    "kmonad/kmonad-vim",
-    lazy = false,
+    -- "codota/tabnine-nvim",
+    -- lazy = false,
+    -- build = "./dl_binaries.sh",
+    -- config = function()
+    --   require("tabnine").setup {
+    --     disable_auto_comment = true,
+    --     accept_keymap = "<C-[>",
+    --     dismiss_keymap = "<C-]>",
+    --     debounce_ms = 1500,
+    --     suggestion_color = { gui = "#808080", cterm = 244 },
+    --     exclude_filetypes = { "TelescopePrompt", "NvimTree" },
+    --     log_file_path = nil, -- absolute path to Tabnine log file
+    --     ignore_certificate_errors = false,
+    --   }
+    -- end,
   },
-  {
-    "max397574/better-escape.nvim",
-    enabled = false,
-  },
-
+  { "kmonad/kmonad-vim" },
   {
     "williamboman/mason.nvim",
     opts = {
@@ -23,10 +32,12 @@ return {
         "html-lsp",
         "css-lsp",
         "prettier",
+        "eslint-lsp",
         "typescript-language-server",
         "tailwindcss-language-server",
         "deno",
         -- languages
+        "python-lsp-server",
         "clangd",
         "clang-format",
         "gopls",
@@ -48,10 +59,13 @@ return {
         "lua",
         "html",
         "css",
+        "python",
         "javascript",
         "typescript",
         "tsx",
         "c",
+        "json",
+        "jsonc",
         "c_sharp",
         "markdown",
         "go",
@@ -89,19 +103,37 @@ return {
   },
 
   -- Not in NVChad
+  {
+    "GustavEikaas/easy-dotnet.nvim",
+    cmd = "Dotnet",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+    config = function()
+      require("easy-dotnet").setup()
+    end,
+  },
   { "folke/tokyonight.nvim", lazy = false },
 
   { "catppuccin/nvim", name = "catppuccin", lazy = false },
 
   { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
 
-  { "JoosepAlviste/nvim-ts-context-commentstring" },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    config = function()
+      require("ts_context_commentstring").setup {
+        enable_autocmd = false,
+      }
+    end,
+  },
 
   {
     "ggandor/leap.nvim",
     lazy = false,
     config = function()
-      require("leap")
+      require "leap"
     end,
   },
 

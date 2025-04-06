@@ -4,23 +4,18 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-  theme = "chocolate",
-  theme_toggle = { "chocolate", "blossom_light" },
-  -- transparency = true,
+M.base46 = {
+  theme = "flex-light",
+  theme_toggle = { "flex-light", "flex-light" },
+  transparency = false,
+}
 
+M.ui = {
   cmp = {
     style = "default",
   },
 
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-    NvimTreeOpenedFolderName = { fg = "green", bold = true },
-  },
-
   statusline = {
-    theme = "minimal",
     separator_style = "block",
   },
 }

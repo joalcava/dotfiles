@@ -8,7 +8,10 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
+  "eslint",
+  "biome",
   "ts_ls",
+  "pylsp",
   "tailwindcss",
   "clangd",
   "csharp_ls",
@@ -26,4 +29,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
