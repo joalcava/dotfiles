@@ -1,26 +1,13 @@
 return {
-  -- {
-  --   dir = "/home/joalcava/repos/tw-prefixer.nvim",
-  --   lazy = false
-  -- },
   {
-    -- "codota/tabnine-nvim",
-    -- lazy = false,
-    -- build = "./dl_binaries.sh",
-    -- config = function()
-    --   require("tabnine").setup {
-    --     disable_auto_comment = true,
-    --     accept_keymap = "<C-[>",
-    --     dismiss_keymap = "<C-]>",
-    --     debounce_ms = 1500,
-    --     suggestion_color = { gui = "#808080", cterm = 244 },
-    --     exclude_filetypes = { "TelescopePrompt", "NvimTree" },
-    --     log_file_path = nil, -- absolute path to Tabnine log file
-    --     ignore_certificate_errors = false,
-    --   }
-    -- end,
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
   },
+
   { "kmonad/kmonad-vim" },
+
   {
     "williamboman/mason.nvim",
     opts = {
@@ -86,29 +73,20 @@ return {
   },
 
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require("nvchad.configs.lspconfig").defaults()
-      require "configs.lspconfig"
-    end,
-  },
-
-  {
     "numToStr/Comment.nvim",
-    config = function(_, opts)
+    config = function(_)
       require("Comment").setup {
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       }
     end,
   },
 
-  -- Not in NVChad
   {
     "GustavEikaas/easy-dotnet.nvim",
     cmd = "Dotnet",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
+      "nvim-telescope/telescope.nvim",
     },
     config = function()
       require("easy-dotnet").setup()
