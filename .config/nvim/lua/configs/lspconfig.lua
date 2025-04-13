@@ -2,7 +2,6 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
 local servers = {
   "html",
   "cssls",
@@ -17,11 +16,13 @@ local servers = {
   "bashls",
   "gopls",
   "rust_analyzer",
+  "azure_pipelines_ls",
+  "bicep",
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
+-- lsps with default configuration
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,

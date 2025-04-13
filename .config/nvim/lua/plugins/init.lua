@@ -31,8 +31,10 @@ return {
         "rust-analyzer",
         "csharp-language-server",
         -- config n scripting
+        "bicep-lsp",
         "taplo",
         "bash-language-server",
+        "azure-pipelines-language-server",
       },
     },
   },
