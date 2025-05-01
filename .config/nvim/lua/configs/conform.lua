@@ -1,9 +1,4 @@
 local options = {
-  format_on_save = {
-    timeout_ms = 2500,
-    lsp_fallback = true,
-  },
-
   formatters_by_ft = {
     sh = { "shfmt" },
     lua = { "stylua" },
@@ -19,6 +14,11 @@ local options = {
 
     go = { "gofmt", "goimports" },
     rust = { "rustfmt" },
+  },
+
+  format_on_save = {
+    timeout_ms = 2000,
+    lsp_format = "fallback"
   },
 }
 

@@ -94,9 +94,6 @@ return {
       require("easy-dotnet").setup()
     end,
   },
-  { "folke/tokyonight.nvim", lazy = false },
-
-  { "catppuccin/nvim", name = "catppuccin", lazy = false },
 
   { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
 
@@ -126,7 +123,7 @@ return {
     },
     cmd = "Neogit",
     config = function()
-      vim.cmd [[colorscheme catppuccin]]
+      -- vim.cmd [[colorscheme catppuccin]]
       require("neogit").setup {}
     end,
   },

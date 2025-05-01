@@ -8,3 +8,6 @@ vim.cmd([[
   set spell
   set spelllang=es_es,en_us
 ]])
+
+
+vim.cmd [[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]]
