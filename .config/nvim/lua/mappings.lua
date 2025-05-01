@@ -1,13 +1,9 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("n", "-", ";")
 map("n", ";", ":", { desc = "CMD enter command mode" })
-
--- map("n", "<leader>q", "<cmd> q <CR>", { desc = "Exit vim" })
 
 map("v", "<", "<gv", { desc = "indent" })
 map("v", ">", ">gv", { desc = "indent" })
@@ -23,5 +19,5 @@ map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
 
 --  format with conform
 map("n", "<leader>fm", function()
-  require("conform").format { timeout_ms = 2500 }
+  require("conform").format { timeout_ms = 2500, lsp_format = "fallback" }
 end, { desc = "formatting" })
