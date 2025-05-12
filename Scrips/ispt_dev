@@ -1,0 +1,18 @@
+#!/bin/bash
+
+tmux new -s work -d
+tmux rename-window -t work ispt
+tmux send-keys -t work 'cd ~/repos/isoptimo/server/src/Web/' C-m
+tmux send-keys -t work 'dotnet watch run' C-m
+tmux split-window -v -t work
+tmux send-keys -t work 'cd ~/repos/isoptimo/client' C-m
+tmux send-keys -t work 'bun run dev' C-m
+
+tmux new-window -t work
+tmux rename-window -t work nvim
+tmux send-keys -t work 'cd ~/repos/isoptimo/client' C-m
+tmux send-keys -t work 'nvim' C-m
+
+tmux new-window -t work
+tmux select-window -t work:1
+tmux attach -t work
