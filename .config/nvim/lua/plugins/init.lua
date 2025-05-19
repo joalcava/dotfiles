@@ -1,42 +1,15 @@
 return {
   {
+    "stevearc/conform.nvim",
+    event = "BufWritePre", -- format on save
+    opts = require "configs.conform",
+  },
+
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
-  },
-
-  { "kmonad/kmonad-vim" },
-
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      pkgs = {
-        -- lua
-        "lua-language-server",
-        "stylua",
-        -- web dev
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "eslint-lsp",
-        "typescript-language-server",
-        "tailwindcss-language-server",
-        "deno",
-        -- languages
-        "python-lsp-server",
-        "clangd",
-        "clang-format",
-        "gopls",
-        "rust-analyzer",
-        "csharp-language-server",
-        -- config n scripting
-        "bicep-lsp",
-        "taplo",
-        "bash-language-server",
-        "azure-pipelines-language-server",
-      },
-    },
   },
 
   {
@@ -67,12 +40,40 @@ return {
   },
 
   {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre' -- format on save
-    config = function()
-      require "configs.conform"
-    end,
+    "williamboman/mason.nvim",
+    opts = {
+      pkgs = {
+        -- lua
+        "lua-language-server",
+        "stylua",
+        -- web dev
+        "biome",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "eslint-lsp",
+        "typescript-language-server",
+        "tailwindcss-language-server",
+        "deno",
+        -- languages
+        "python-lsp-server",
+        "clangd",
+        "clang-format",
+        "gopls",
+        "rust-analyzer",
+        "csharp-language-server",
+        -- config n scripting
+        "bicep-lsp",
+        "taplo",
+        "bash-language-server",
+        "azure-pipelines-language-server",
+      },
+    },
   },
+
+  -- -----------------------
+
+  { "kmonad/kmonad-vim" },
 
   {
     "numToStr/Comment.nvim",
@@ -123,7 +124,7 @@ return {
     },
     cmd = "Neogit",
     config = function()
-      -- vim.cmd [[colorscheme catppuccin]]
+      vim.cmd [[colorscheme catppuccin]]
       require("neogit").setup {}
     end,
   },
@@ -149,13 +150,11 @@ return {
   },
 
   {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
-    event = "VeryLazy",
-    config = function()
-      require "configs.treesitter-textobjects"
-    end,
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
+
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }
