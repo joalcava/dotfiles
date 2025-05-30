@@ -157,4 +157,17 @@ return {
   },
 
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+  {
+    "atiladefreitas/dooing",
+    cmd = "Dooing",
+    keys = {
+      { "<leader>td" },
+    },
+    config = function()
+      require("dooing").setup {
+        -- your custom config here (optional)
+      }
+    end,
+  },
 }
