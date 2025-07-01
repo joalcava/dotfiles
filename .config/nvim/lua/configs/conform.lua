@@ -14,6 +14,8 @@ local options = {
 
     go = { "gofmt", "goimports" },
     rust = { "rustfmt" },
+    csharp = { "csharpier" },
+    cs = { "csharpier" },
   },
 
   -- format_on_save = {

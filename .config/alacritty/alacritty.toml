@@ -1,5 +1,6 @@
 [font]
-normal = { family = "MonoLisaScript Nerd Font" }
+# normal = { family = "MonoLisaScript Nerd Font" }
+normal = { family = "Iosevka SS08" }
 size = 11
 
 [window]

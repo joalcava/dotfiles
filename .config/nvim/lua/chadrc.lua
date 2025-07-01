@@ -6,12 +6,15 @@
 local M = {}
 
 M.base46 = {
-	theme = "tokyonight",
+	-- theme = "pastelbeans",
+	-- theme = "mountain",
+	-- theme = "tomorrow_night",
+  theme = "monochrome",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+	},
 }
 
 -- M.nvdash = { load_on_startup = true }

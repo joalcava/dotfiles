@@ -1,5 +1,11 @@
 return {
   {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = { },
+  },
+
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
     opts = require "configs.conform",

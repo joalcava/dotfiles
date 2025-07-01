@@ -16,3 +16,12 @@ map("v", "<A-Up>", ":MoveBlock(-1)<CR>")
 map({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
 map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
 
+-- todo-comments
+map("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+map("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+
