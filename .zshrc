@@ -134,3 +134,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "/home/joalcava/.scm_breeze/scm_breeze.sh" ] && source "/home/joalcava/.scm_breeze/scm_breeze.sh"
 
 eval "$(starship init zsh)"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi

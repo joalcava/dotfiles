@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=kmonad
+Comment=kmonad tartup script
+Exec=/home/joalcava/apps/kmonad /home/joalcava/.config/config.kbd
+StartupNotify=false
+Terminal=false
