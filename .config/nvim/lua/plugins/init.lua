@@ -2,7 +2,7 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = { },
+    opts = {},
   },
 
   {
@@ -165,14 +165,57 @@ return {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   {
-    "atiladefreitas/dooing",
-    cmd = "Dooing",
+    "Hashino/doing.nvim",
+    lazy = false,
+    cmd = "Do",
+    opts = {},
     keys = {
-      { "<leader>td" },
+      {
+        "<leader>da",
+        function()
+          require("doing").add()
+        end,
+        {},
+      },
+      {
+        "<leader>dn",
+        function()
+          require("doing").done()
+        end,
+        {},
+      },
+      {
+        "<leader>de",
+        function()
+          require("doing").edit()
+        end,
+        {},
+      },
     },
     config = function()
-      require("dooing").setup {
-        -- your custom config here (optional)
+      require("doing").setup {
+        message_timeout = 2000,
+        doing_prefix = "Doing: ",
+
+        ignored_buffers = { "NvimTree" },
+        show_remaining = true,
+        show_messages = true,
+
+        -- window configs of the floating tasks editor
+        -- see :h nvim_open_win() for available options
+        edit_win_config = {
+          width = 90,
+          height = 25,
+          border = "rounded",
+        },
+
+        store = {
+          -- name of tasks file
+          file_name = ".tasks",
+          -- if true, tasks file is always in sync otherwise,
+          -- tasks get saved on closing neovim or changing cwd
+          sync_tasks = true,
+        },
       }
     end,
   },
