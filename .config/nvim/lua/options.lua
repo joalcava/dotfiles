@@ -5,7 +5,7 @@ vim.opt.relativenumber = true
 
 vim.cmd([[
   let g:sneak#s_next = 1
-  set spell
+  "set spell
   set spelllang=es_es,en_us
 ]])
 

@@ -9,7 +9,8 @@ M.base46 = {
 	-- theme = "pastelbeans",
 	-- theme = "mountain",
 	-- theme = "tomorrow_night",
-  theme = "monochrome",
+  theme = "ashes",
+  transparency = true,
 
 	hl_override = {
 		Comment = { italic = true },
