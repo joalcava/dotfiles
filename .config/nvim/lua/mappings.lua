@@ -25,3 +25,4 @@ map("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
+map("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")

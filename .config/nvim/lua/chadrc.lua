@@ -9,7 +9,7 @@ M.base46 = {
 	-- theme = "pastelbeans",
 	-- theme = "mountain",
 	-- theme = "tomorrow_night",
-  theme = "ashes",
+  theme = "ayu_dark",
   transparency = true,
 
 	hl_override = {
