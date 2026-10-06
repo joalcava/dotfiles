@@ -13,9 +13,8 @@ fish_indicator = "󰈺"
 [aws]
 disabled = true
 
-# [directory]
-# truncation_length = 5
-# truncate_to_repo = false
+[directory]
+truncate_to_repo = false
 
 [time]
 disabled = false

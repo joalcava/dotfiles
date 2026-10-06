@@ -17,18 +17,18 @@
 
 (defalias
     ctl_z (tap-hold-next-release 200 z lctl)
-    alt_r (tap-hold-next-release 200 r lalt)
-    met_s (tap-hold-next-release 200 s lmet)
-    sft_t (tap-hold-next-release 200 t lsft)
+    alt_s (tap-hold-next-release 200 s lalt)
+    met_d (tap-hold-next-release 200 d lmet)
+    sft_f (tap-hold-next-release 200 f lsft)
 
-    sft_n (tap-hold-next-release 200 n rsft)
-    met_e (tap-hold-next-release 200 e rmet)
-    alt_i (tap-hold-next-release 200 i lalt)
-    ctl_o (tap-hold-next-release 200 o rctl)
+    sft_j (tap-hold-next-release 200 j rsft)
+    met_k (tap-hold-next-release 200 k rmet)
+    alt_l (tap-hold-next-release 200 l lalt)
+    ctl__ (tap-hold-next-release 200 ; rctl)
 )
 
 (deflayer default
-    tab   q       w       f       p       b   j   l       u       y       ;
-    esc   a       @alt_r  @met_s  @sft_t  g   m   @sft_n  @met_e  @alt_i  @ctl_o
-    lsft  @ctl_z  x       c       d       v   k   h       ,       .       /
+    tab   q       w       e       r       t   y   u   i   o       p
+    esc   a       @alt_s  @met_d  @sft_f  g   h   j   k   l  @ctl__
+    lsft  @ctl_z  x       c       v       b   n   m   ,   .       /
 )

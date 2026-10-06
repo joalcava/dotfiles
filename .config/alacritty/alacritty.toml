@@ -1,8 +1,8 @@
 [font]
-# normal = { family = "MonoLisaScript Nerd Font" }
+normal = { family = "MonoLisaScript Nerd Font" }
 # normal = { family = "Iosevka SS08" }
-normal = { family = "Iosevka" }
-size = 12
+# normal = { family = "Iosevka" }
+size = 11
 # offset = { x = 0, y = -1 }
 
 [window]

@@ -9,7 +9,7 @@ M.base46 = {
   -- theme = "pastelbeans",
   -- theme = "mountain",
   -- theme = "tomorrow_night",
-  theme = "catppuccin",
+  theme = "aquarium",
   transparency = false,
 
   hl_override = {

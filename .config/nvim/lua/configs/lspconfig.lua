@@ -3,8 +3,8 @@ require("nvchad.configs.lspconfig").defaults()
 local servers = {
   "html",
   "cssls",
-  "eslint",
-  "biome",
+  "oxlint",
+  -- "eslint",
   "ts_ls",
   "pylsp",
   "tailwindcss",
@@ -16,6 +16,11 @@ local servers = {
   "rust_analyzer",
   "azure_pipelines_ls",
 }
+
+vim.lsp.config("azure_pipelines_ls", {
+  root_markers = { "azure-pipelines.yml" },
+  workspace_required = true,
+})
 
 vim.lsp.enable(servers)
 

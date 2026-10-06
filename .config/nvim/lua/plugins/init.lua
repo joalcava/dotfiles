@@ -1,5 +1,27 @@
 return {
   {
+    "MagicDuck/grug-far.nvim",
+    opts = { headerMaxWidth = 80 },
+    cmd = { "GrugFar", "GrugFarWithin" },
+    keys = {
+      {
+        "<leader>sr",
+        function()
+          local grug = require "grug-far"
+          local ext = vim.bo.buftype == "" and vim.fn.expand "%:e"
+          grug.open {
+            transient = true,
+            prefills = {
+              filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+            },
+          }
+        end,
+        mode = { "n", "x" },
+        desc = "Search and Replace",
+      },
+    },
+  },
+  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
@@ -56,7 +78,9 @@ return {
         "biome",
         "html-lsp",
         "css-lsp",
+        "oxfmt",
         "prettier",
+        "oxlint",
         "eslint-lsp",
         "typescript-language-server",
         "tailwindcss-language-server",
@@ -102,7 +126,26 @@ return {
     end,
   },
 
-  { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
+  {
+    "esmuellert/codediff.nvim",
+    cmd = "CodeDiff",
+    opts = {
+      explorer = {
+        line_stats = {
+          enabled = true,
+        },
+      },
+      diff = {
+        gutter_signs = {
+          insert_text = "＋",
+          delete_text = "－",
+          highlight_numbers = true,
+          changed_priority = 100,
+          unchanged_priority = nil,
+        },
+      },
+    },
+  },
 
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
@@ -125,12 +168,11 @@ return {
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
+      "esmuellert/codediff.nvim",
       "nvim-telescope/telescope.nvim",
     },
     cmd = "Neogit",
     config = function()
-      vim.cmd [[colorscheme catppuccin]]
       require("neogit").setup {}
     end,
   },

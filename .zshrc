@@ -12,6 +12,7 @@ fi
 
 export PATH="/home/joalcava/Scrips/:$PATH"
 export PATH="/home/joalcava/go/bin/:$PATH"
+export PATH="/home/joalcava/apps/kafka_2.13-4.2.0/bin/:$PATH"
 
 # dotnet
 export PATH="/home/joalcava/.dotnet/:$PATH"
@@ -123,6 +124,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
 
 # bun completions
 [ -s "/home/joalcava/.bun/_bun" ] && source "/home/joalcava/.bun/_bun"
